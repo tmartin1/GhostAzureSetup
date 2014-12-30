@@ -64,3 +64,7 @@ CHANGELOG.md
 
 # Coverage reports
 coverage.html
+
+# Sublime project files
+GhostAzureSetup.sublime-project
+GhostAzureSetup.sublime-workspace
