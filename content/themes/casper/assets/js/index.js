@@ -59,6 +59,12 @@
 
         $(".scroll-down").arctic_scroll();
 
+        // Only call the method if we find an element
+        // with the iframe-resizer class
+        if ($('.iframe-resizer').length > 0) {
+            iFrameResize();    
+        }
+
     });
 
     // smartresize
