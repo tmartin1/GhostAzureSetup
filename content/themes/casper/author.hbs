@@ -7,7 +7,7 @@
 {{#author}}
   <header class="main-header author-head {{#if cover}}" style="background-image: url({{cover}}){{else}}no-cover{{/if}}">
     <nav class="main-nav overlay clearfix">
-      <a class="back-button icon-arrow-left" href="{{@blog.url}}">Home</a>
+      <a class="back-button icon-arrow-left" href="/">Home</a>
       <a class="subscribe-button icon-feed" href="{{url}}rss/">{{name}}</a>
     </nav>
   </header>
@@ -25,26 +25,31 @@
 
     <h2 class="author-bio">{{bio}}</h2>
 
-    <div class="author-meta">    
-      <!-- GitHub and Linkedin Profile Links -->
+    <div class="author-meta">
+      <!-- Resume, GitHub, and Linkedin Profile Links -->
+      <span class="author-link">
+        <a href="/assets/data/resume.pdf">
+          <img src="{{asset "images/acrobat-icon.png"}}" style="height:20px">
+          Resume
+        </a>
+      </span>
       <span class="author-link">
         <a href="http://www.github.com/tmartin1">
-          <img src="{{asset "images/github-icon.png"}}" style="height:25px">
-          GitHub Profile
+          <img src="{{asset "images/github-icon.png"}}" style="height:20px">
+          GitHub
         </a>
       </span>
       <span class="author-link">
         <a href="http://www.linkedin.com/in/timothymartin1">
-          <img src="{{asset "images/linkedin-icon.png"}}" style="height:25px">
-          LinkedIn Profile
+          <img src="{{asset "images/linkedin-icon.png"}}" style="height:20px">
+          LinkedIn
         </a>
       </span>
-
+      <br>
       <!-- Location and Post Count -->
       {{#if location}}<span class="author-location icon-location">{{location}}</span>
       {{/if}}
       <span class="author-stats"><i class="icon-stats"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
-
     </div>
   </section>
 {{/author}}
@@ -52,7 +57,31 @@
 {{! The main content area on the homepage }}
 <main class="content" role="main">
 
+  <p>
+    Welcome to my blog. To tell you a little about myself; although I was born in Worcester, MA I've spent
+    most my life in the beautiful city of Seattle. I attended the University of Washington and graduated with
+    degrees in applied math and economics.
+  </p>
+  <p>
+    Driven by my interest in the complexity of finance and a desire to help people, I pursued a career as a
+    personal financial advisor. I joined a team of highly skilled and motivated financial advisors and in 2011
+    co-founded a new advising firm, Finity Group.
+  </p>
+  <p>
+    Outside of the financial planning and startup worlds, I also had an interest in software development and
+    found that basic programming skills were quite useful as an advisor. Some simple visual basic or rudimentary
+    JavaScript applications could vastly increase efficiency and allow us to provide newer and better services
+    to our clients.
+  </p>
+  <p>
+    While I am still very passionate about financial planning and wealth management, I am currently attending
+    Hack Reactor to focus on honing my skills as a full-stack software engineer.
+  </p>
+  <p>
+    This blog is primarily to document my journey through Hack Reactor, explore programming topics I find
+    interesting, and discuss some of the projects I'm working on.
+  </p>
     {{! The tag below includes the post loop - partials/loop.hbs }}
-    {{> "loop"}}
+    <!-- {{> "loop"}} -->
 
 </main>
