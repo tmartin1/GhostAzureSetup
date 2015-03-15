@@ -5,8 +5,8 @@
 <header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
     <nav class="main-nav overlay clearfix">
         {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-        <a class="back-button icon-arrow-left" href="/author/tim">About</a>
-        <a class="back-button icon-arrow-left" href="/assets/data/resume.pdf">Resume</a>
+        <a class="back-button" href="/author/tim">About</a>
+        <!-- <a class="back-button" href="/resume.pdf">Resume</a> -->
         <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
     </nav>
     <div class="vertical">
